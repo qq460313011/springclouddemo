@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+#eureka
+eureka:
+  instance:
+    hostname: testEureka1 #eureka 服务端名字
+  client:
+    register-with-eureka: false #是否向eureka注册中心注册自己
+    fetch-registry: false #如果为false，表示自己为注册中心
+    service-url: #eureka监控页面
+      defaultZone: http://testEureka2:7002/eureka/,http://testEureka3:7003/eureka/
+
