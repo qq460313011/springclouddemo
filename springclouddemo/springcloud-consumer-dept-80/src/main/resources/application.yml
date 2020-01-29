@@ -5,6 +5,6 @@ server:
 eureka:
   client:
     register-with-eureka: false
-    fetch-registry: false
     service-url:
       defalutZone: http://testEureka1:7001/eureka/,http://testEureka2:7002/eureka/,http://testEureka3:7003/eureka/
+    fetch-registry: false

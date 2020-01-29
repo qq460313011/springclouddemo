@@ -1,0 +1,31 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul-gateway
+
+#eureka
+eureka:
+ client:
+   service-url:
+    defaultZone: http://testEureka1:7001/eureka/,http://testEureka2:7002/eureka/,http://testEureka3:7003/eureka/
+
+ instance:
+   prefer-ip-address: true
+   instance-id: zuul9527.com
+
+
+
+info:
+  app.name: fw-zuul
+  company.name: www.fw.com
+
+
+zuul:
+  routes:
+    mydept.serverId: springcloud-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: "*" #不能在使用这个路径访问了，ignore忽略
+  prefix: /fw           #设置公共的前缀
+

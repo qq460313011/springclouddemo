@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+#eureka配置
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defalutZone: http://testEureka1:7001/eureka/,http://testEureka2:7002/eureka/,http://testEureka3:7003/eureka/
+    fetch-registry: false
+
+#feign.hystrix开启服务降级
+feign:
+  hystrix:
+    enabled: true
+
+
